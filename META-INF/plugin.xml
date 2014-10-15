@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+    <id>net.progressum.latex</id>
+    <name>Progressum Latex</name>
+    <version>1.0</version>
+    <vendor email="support@martinwolf.eu" url="http://www.martinwolf.eu">Martin Wolf</vendor>
+
+    <description><![CDATA[
+          A plugin for handling LaTeX files.<br>
+          Adds syntax highlighting and spell checking.
+    ]]></description>
+
+    <change-notes><![CDATA[
+          Initial release.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="net.progressum.latex.LatexFileTypeLoader"/>
+
+        <!--<syntaxHighlighter key="Latex" implementationClass="net.progressum.latex.highlighter.LatexSyntaxHighlighter"/>-->
+        <lang.syntaxHighlighterFactory key="Latex" implementationClass="net.progressum.latex.highlighter.LatexSyntaxHighlighterFactory"/>
+        <lang.parserDefinition language="Latex" implementationClass="net.progressum.latex.lang.parser.LatexParserDefinition"/>
+        <!--<spellchecker.support language="Latex" implementationClass="dk.progressum.latex.editor.spellchecking.LatexSpellChecker"/>
+        -->
+    </extensions>
+
+    <application-components>
+        <!-- None -->
+    </application-components>
+
+    <project-components>
+        <!-- None -->
+    </project-components>
+
+    <actions>
+        <!-- None -->
+    </actions>
+
+</idea-plugin>
