@@ -13,5 +13,6 @@ hs_err_pid*
 
 # various folders created by intellij
 gen/
+out/
 libs/
 .idea/
