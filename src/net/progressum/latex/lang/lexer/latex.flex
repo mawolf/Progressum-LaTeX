@@ -38,7 +38,7 @@ eol = [\r\n]
 
 number = [0-9]+
 
-command = "\\"[^\[][a-zA-Z]*
+command = "\\"[^\[\ ][a-zA-Z]+
 string = [a-zA-Z0-9_]*
 comments = "%".*{eol}
 
@@ -46,6 +46,7 @@ whitespace = [\ \t]
 
 %%
 
+"\\\\" { return LatexTokenTypes.NEWLINE; }
 "\\usepackage" { return LatexTokenTypes.USEPACKAGE; }
 "\\documentclass" {return LatexTokenTypes.DOCUMENTCLASS; }
 {command} { return LatexTokenTypes.COMMAND; }
@@ -60,7 +61,9 @@ whitespace = [\ \t]
 "]" { return LatexTokenTypes.RIGHT_SQUARE; }
 "," { return LatexTokenTypes.COMMA; }
 "\\" { return LatexTokenTypes.BACKSLASH; }
+
 "*" { return LatexTokenTypes.ASTERISK; }
+
 
 "$" { return LatexTokenTypes.DOLLAR; }
 

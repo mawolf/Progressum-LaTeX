@@ -1,15 +1,15 @@
 // This is a generated file. Not intended for manual editing.
 package net.progressum.latex.lang.psi.impl;
 
-import java.util.List;
-import org.jetbrains.annotations.*;
-import com.intellij.lang.ASTNode;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.PsiElementVisitor;
-import com.intellij.psi.util.PsiTreeUtil;
-import static net.progressum.latex.lang.lexer.LatexTokenTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
-import net.progressum.latex.lang.psi.*;
+import com.intellij.lang.ASTNode;
+import com.intellij.psi.PsiElementVisitor;
+import net.progressum.latex.lang.psi.LatexCommandClass;
+import net.progressum.latex.lang.psi.LatexLatexCode;
+import net.progressum.latex.lang.psi.LatexUsepackageClass;
+import net.progressum.latex.lang.psi.LatexVisitor;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class LatexLatexCodeImpl extends ASTWrapperPsiElement implements LatexLatexCode {
 

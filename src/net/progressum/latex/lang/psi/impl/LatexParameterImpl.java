@@ -1,15 +1,16 @@
 // This is a generated file. Not intended for manual editing.
 package net.progressum.latex.lang.psi.impl;
 
-import java.util.List;
-import org.jetbrains.annotations.*;
+import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.intellij.lang.ASTNode;
-import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
 import com.intellij.psi.util.PsiTreeUtil;
-import static net.progressum.latex.lang.lexer.LatexTokenTypes.*;
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
-import net.progressum.latex.lang.psi.*;
+import net.progressum.latex.lang.psi.LatexLatexCode;
+import net.progressum.latex.lang.psi.LatexParameter;
+import net.progressum.latex.lang.psi.LatexVisitor;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class LatexParameterImpl extends ASTWrapperPsiElement implements LatexParameter {
 

@@ -1,0 +1,31 @@
+{
+  parserClass="net.progressum.latex.lang.parser.LatexParser"
+  parserUtilClass="net.progressum.latex.lang.parser.LatexParserUtil"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Latex"
+  psiImplClassSuffix="Impl"
+  psiPackage="net.progressum.latex.lang.psi"
+  psiImplPackage="net.progressum.latex.lang.psi.impl"
+
+  elementTypeHolderClass="net.progressum.latex.lang.lexer.LatexTokenTypes"
+  elementTypeClass="net.progressum.latex.lang.lexer.LatexElementTypeImpl"
+  tokenTypeClass="net.progressum.latex.lang.lexer.LatexElementTypeImpl"
+}
+
+latex_file ::= top_statement
+top_statement ::= (document_class EOL)? latex_code*
+
+latex_code ::= usepackage_class | command_class | DOLLAR | COMMENT | STRING | EOL
+
+document_class ::= DOCUMENTCLASS (bracket_options)? brace_options
+usepackage_class ::= USEPACKAGE (bracket_options)? brace_options
+
+command_class ::= COMMAND ASTERISK? ( bracket_options | brace_options )*
+
+bracket_options ::=  LEFT_SQUARE parameters RIGHT_SQUARE
+brace_options::= ( LEFT_CURLY parameters RIGHT_CURLY )
+parameters ::= parameter ( COMMA parameter )*
+parameter ::= latex_code*
+

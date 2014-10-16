@@ -42,6 +42,7 @@ public interface LatexTokenTypes {
     IElementType LATEX_CODE = new LatexElementTypeImpl("LATEX_CODE");
     IElementType PARAMETER = new LatexElementTypeImpl("PARAMETER");
     IElementType PARAMETERS = new LatexElementTypeImpl("PARAMETERS");
+    IElementType NEWLINE = new LatexElementTypeImpl("NEWLINE");
     IElementType TOP_STATEMENT = new LatexElementTypeImpl("TOP_STATEMENT");
     IElementType USEPACKAGE_CLASS = new LatexElementTypeImpl("USEPACKAGE_CLASS");
     IElementType COMMA = new LatexElementTypeImpl("COMMA");
